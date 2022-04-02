@@ -109,7 +109,7 @@ chord_composer:
     - xform/Nt$/p/
     - xform/Nk$/w/
     - xform/N/ng/
-    - xform/([^iyu])e$/$1ej/
+    - xform/([^iyuae])e$/$1ej/
     # 最终转换
     - xform/([tdn])(h?)([iuy]|wi)/$1j$2$3/
     - xform/([tdn])(h?)(ae|ee|oeu)/$1r$2$3/
