@@ -58,6 +58,12 @@ chord_composer:
   alphabet: "qwertasdfgzxcvb uihjknmopl;,."
   algebra:
     - 'xlit|qwertasdfgzxcvb uihjknmopl;,.|jndtTqNgkKzsZcCWiueoOAaNkntwj'
+
+    - xform/^W$/ /
+    - xform/^t$/;/
+    - xform/^w$/,/
+    - xform/^j$/./
+
     # 声母
     - xform/^jn/nr/
     - xform/^nd/dr/
@@ -108,11 +114,6 @@ chord_composer:
     - xform/([tdn])(h?)(ae|ee|oeu)/$1r$2$3/
     - xform/(ts|dz|s|z)(h?)(ae|ee|oeu)/$1r$2$3/
     - xform/g(w?[aeo])/gh$1/
-
-    - xform/^w$/ /
-    - xform/^t$/;/
-    - xform/^w$/,/
-    - xform/^j$/./
 
   output_format:
     - "xform/^([ptkbdgmnqshzlj]|tr|ph|th|trh|kh|dr|nr|nj|ng|ts|tsr|tj|tsh|tsrh|tjh|dz|dzr|dj|sr|sj|zr|zj|gh)?([iyueoa]|wi|yi|ui|ou|ie|wie|ye|ue|ee|wee|yo|uo|eo|weo|oeu|ae|wae|iae|wiae|yae|uae|wa|ya|ua)([ptknmjw]|ng)?([qh])?$/$1$2$3$4'/"
