@@ -91,6 +91,7 @@ chord_composer:
     # 韵母
     - xform/iu/yi/
     - xform/ue/ye/
+    - xform/uo/yo/
     - xform/eo/ee/
     - xform/oO/oeu/
     - xform/oA/iae/
@@ -104,6 +105,7 @@ chord_composer:
     - xform/Wo/eo/
     - xform/Wou/weo/
     - xform/W/w/
+    - xform/([pbm]|ph)y/$1u/
     # 韵尾
     - xform/nt$/m/
     - xform/Nt$/p/
