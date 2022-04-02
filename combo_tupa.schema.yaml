@@ -9,6 +9,7 @@ schema:
     - goromu
   description: |
     並擊輸入切韻拼音
+
 switches:
   - name: ascii_mode
     reset: 0
@@ -55,13 +56,12 @@ speller:
     - derive/[qh]$//
 
 chord_composer:
-  alphabet: "qwertasdfgzxcvb uihjknmopl;,."
+  alphabet: "qwertasdfgzxcvb uihjknmopl;."
   algebra:
-    - 'xlit|qwertasdfgzxcvb uihjknmopl;,.|jndtTqNgkKzsZcCWiueoOAaNkntwj'
+    - 'xlit|qwertasdfgzxcvb uihjknmopl;.|jndtTqNgkKzsZcCWiueoOAaNkntj'
 
     - xform/^W$/ /
     - xform/^t$/;/
-    - xform/^w$/,/
     - xform/^j$/./
 
     # 声母
@@ -108,6 +108,7 @@ chord_composer:
     # 韵尾
     - xform/nt$/m/
     - xform/Nt$/p/
+    - xform/Nk$/w/
     - xform/N/ng/
     # 最终转换
     - xform/([tdn])(h?)([iuy]|wi)/$1j$2$3/
