@@ -3,13 +3,12 @@
 
 schema:
   schema_id: combo_tupa
-  name: 切韵拼音·宫保测试2
+  name: 切韻拼音·宮保測試二
   version: '1.0'
   author:
     - goromu
   description: |
-    并击输入切韵拼音的方法
-
+    並擊輸入切韻拼音
 switches:
   - name: ascii_mode
     reset: 0
