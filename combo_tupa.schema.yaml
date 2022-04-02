@@ -1,0 +1,137 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: combo_tupa
+  name: 切韵拼音·宫保测试2
+  version: '1.0'
+  author:
+    - goromu
+  description: |
+    并击输入切韵拼音的方法
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - chord_composer  # 實現並擊按鍵處理
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+editor:
+  bindings:
+    BackSpace: back_syllable
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra:
+    - derive/[qh]$//
+
+chord_composer:
+  alphabet: "qwertasdfgzxcvb uihjknmopl;,."
+  algebra:
+    - 'xlit|qwertasdfgzxcvb uihjknmopl;,.|jndtTqNgkKzsZcCWiueoOAaNkntwj'
+    # 声母
+    - xform/^jn/nr/
+    - xform/^nd/dr/
+    - xform/^dt/tr/
+    - xform/^tT/trh/
+    - xform/^qN/m/
+    - xform/^Ng/b/
+    - xform/^gk/p/
+    - xform/^kK/ph/
+    - xform/^nq/h/
+    - xform/^nk/sj/
+    - xform/^dq/zj/
+    - xform/^dk/l/
+    - xform/^zs/sr/
+    - xform/^sZ/dzr/
+    - xform/^Zc/tsr/
+    - xform/^cC/tsrh/
+    - xform/^zc/zr/
+    - xform/^N/ng/
+    - xform/^T/th/
+    - xform/^K/kh/
+    - xform/^Z/dz/
+    - xform/^c/ts/
+    - xform/^C/tsh/
+    # 韵母
+    - xform/iu/yi/
+    - xform/ue/ye/
+    - xform/eo/ee/
+    - xform/uo/yo/
+    - xform/oO/oeu/
+    - xform/oA/iae/
+    - xform/OA/yae/
+    - xform/Oa/ya/
+    - xform/O/ou/
+    - xform/A/ae/
+    # 合口
+    - xform/Wu/y/
+    - xform/Wy/u/
+    - xform/Wo/eo/
+    - xform/Wou/weo/
+    - xform/W/w/
+    # 韵尾
+    - xform/nt$/m/
+    - xform/Nt$/p/
+    - xform/N/ng/
+    # 最终转换
+    - xform/([tdn])(h?)([iuy]|wi)/$1j$2$3/
+    - xform/([tdn])(h?)(ae|ee|oeu)/$1r$2$3/
+    - xform/(ts|dz|s|z)(h?)(ae|ee|oeu)/$1r$2$3/
+    - xform/g(w?[aeo])/gh$1/
+
+    - xform/^w$/ /
+    - xform/^t$/;/
+    - xform/^w$/,/
+    - xform/^j$/./
+
+  output_format:
+    - "xform/^([ptkbdgmnqshzlj]|tr|ph|th|trh|kh|dr|nr|nj|ng|ts|tsr|tj|tsh|tsrh|tjh|dz|dzr|dj|sr|sj|zr|zj|gh)?([iyueoa]|wi|yi|ui|ou|ie|wie|ye|ue|ee|wee|yo|uo|eo|weo|oeu|ae|wae|iae|wiae|yae|uae|wa|ya|ua)([ptknmjw]|ng)?([qh])?$/$1$2$3$4'/"
+    - "erase/^([A-Za-z]+)$/"
+  prompt_format:
+    # 加方括弧
+    - 'xform/^(.*)$/[$1]/'
+
+translator:
+  dictionary: tupa
+  prism: combo_tupa
+  spelling_hints: 9
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
