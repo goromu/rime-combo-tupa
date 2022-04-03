@@ -125,7 +125,7 @@ chord_composer:
     - xform/(ts|dz|s|z)(h?)(ae|ee|oeu)/$1r$2$3/
     - xform/^g(w?[aeo])/gh$1/
     - xform/yong/uong/
-    - xform/([iyu])aej/$1ej/
+    - xform/([iyu])ae([jwntmp])/$1e$2/
     - xform/eo$/o/
     - xform/^y/u/
 
