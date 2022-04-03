@@ -58,25 +58,26 @@ speller:
 chord_composer:
   alphabet: "qwertasdfgzxcvb uihjknmopl;."
   algebra:
-    - 'xlit|qwertasdfgzxcvb uihjknmopl;.|jndtTqNgkKzsZcCWiueoOAaNkntj'
+    - 'xlit|qwertasdfgzxcvb uihjknmopl;.|qndtTjNgkKzsZcCWiueoOAaNkntj'
 
     - xform/^W$/ /
     - xform/^t$/;/
     - xform/^j$/./
 
     # 声母
-    - xform/^jn/nr/
+    - xform/^qn/nr/
     - xform/^nd/dr/
     - xform/^dt/tr/
     - xform/^tT/trh/
-    - xform/^qN/m/
+    - xform/^jN/m/
     - xform/^Ng/b/
     - xform/^gk/p/
     - xform/^kK/ph/
-    - xform/^nq/h/
-    - xform/^nk/sj/
-    - xform/^dq/zj/
+    - xform/^nj/h/
+    - xform/^Nk/sj/
+    - xform/^jg/zj/
     - xform/^dk/l/
+    - xform/^jk/q/
     - xform/^zs/sr/
     - xform/^sZ/dzr/
     - xform/^Zc/tsr/
