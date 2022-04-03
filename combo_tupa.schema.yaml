@@ -119,13 +119,13 @@ chord_composer:
     - xform/N/ng/
     # 灵活
     - xform/([^iyuae])e$/$1ej/
+    - xform/([iyu])ae([jwntmp])/$1e$2/
     - xform/([iyu])e(ng|k)/$1ae$2/
     - xform/([tdn])(h?)([iuy]|wi)/$1j$2$3/
     - xform/([tdn])(h?)(ae|ee|oeu)/$1r$2$3/
     - xform/(ts|dz|s|z)(h?)(ae|ee|oeu)/$1r$2$3/
     - xform/^g(w?[aeo])/gh$1/
     - xform/yong/uong/
-    - xform/([iyu])ae([jwntmp])/$1e$2/
     - xform/eo$/o/
     - xform/^y/u/
 
