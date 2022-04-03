@@ -102,8 +102,8 @@ chord_composer:
     # 合口
     - xform/Wu/y/
     - xform/Wy/u/
-    - xform/Wo/eo/
     - xform/Wou/weo/
+    - xform/Wo/eo/
     - xform/W/w/
     - xform/([pbm]|ph)y/$1u/
     # 韵尾
