@@ -56,12 +56,14 @@ speller:
     - derive/[qh]$//
 
 chord_composer:
-  alphabet: "qwertasdfgzxcvb uihjknmopl;."
+  alphabet: "qwertasdfgzxcvb uihjknmopl;,."
   algebra:
-    - 'xlit|qwertasdfgzxcvb uihjknmopl;.|qndtTjNgkKzsZcCWiueoOAaNkntj'
+    - 'xlit|qwertasdfgzxcvb uihjknmopl;,.|qndtTjNgkKzsZcCWiueoOAaNkntJj'
 
     - xform/^W$/ /
     - xform/^t$/;/
+    - xform/^J$/,/
+    - xform/J/j/
     - xform/^j$/./
 
     # 声母
