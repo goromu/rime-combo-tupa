@@ -105,7 +105,10 @@ chord_composer:
     - xform/Wou/weo/
     - xform/Wo/eo/
     - xform/W/w/
-    - xform/([pbm]|ph)y/$1u/
+    - xform/([pbm]|ph)y$/$1u/
+    - xform/([pbm]|ph)yo/$1uo/
+    - xform/([pbm]|ph)ya([^e])/$1ua$2/
+    - xform/([pbm]|ph)ya$/$1ua/
     # 韵尾
     - xform/nt$/m/
     - xform/Nt$/p/
@@ -118,6 +121,7 @@ chord_composer:
     - xform/([tdn])(h?)(ae|ee|oeu)/$1r$2$3/
     - xform/(ts|dz|s|z)(h?)(ae|ee|oeu)/$1r$2$3/
     - xform/^g(w?[aeo])/gh$1/
+    - xform/yong/uong/
 
   output_format:
     - "xform/^([ptkbdgmnqshzlj]|tr|ph|th|trh|kh|dr|nr|nj|ng|ts|tsr|tj|tsh|tsrh|tjh|dz|dzr|dj|sr|sj|zr|zj|gh)?([iyueoa]|wi|yi|ui|ou|ie|wie|ye|ue|we|ee|wee|yo|uo|eo|weo|oeu|ae|wae|iae|wiae|yae|uae|wa|ya|ua)([ptknmjw]|ng)?([qh])?$/$1$2$3$4'/"
