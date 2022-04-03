@@ -111,9 +111,9 @@ chord_composer:
     - xform/([pbm]|ph)ya([^e])/$1ua$2/
     - xform/([pbm]|ph)ya$/$1ua/
     # 韵尾
-    - xform/nt$/m/
+    - xform/nt$/w/
     - xform/Nt$/p/
-    - xform/Nk$/w/
+    - xform/Nk$/m/
     - xform/N/ng/
     # 灵活
     - xform/([^iyuae])e$/$1ej/
