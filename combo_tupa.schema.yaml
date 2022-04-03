@@ -117,7 +117,7 @@ chord_composer:
     - xform/([tdn])(h?)([iuy]|wi)/$1j$2$3/
     - xform/([tdn])(h?)(ae|ee|oeu)/$1r$2$3/
     - xform/(ts|dz|s|z)(h?)(ae|ee|oeu)/$1r$2$3/
-    - xform/g(w?[aeo])/gh$1/
+    - xform/^g(w?[aeo])/gh$1/
 
   output_format:
     - "xform/^([ptkbdgmnqshzlj]|tr|ph|th|trh|kh|dr|nr|nj|ng|ts|tsr|tj|tsh|tsrh|tjh|dz|dzr|dj|sr|sj|zr|zj|gh)?([iyueoa]|wi|yi|ui|ou|ie|wie|ye|ue|we|ee|wee|yo|uo|eo|weo|oeu|ae|wae|iae|wiae|yae|uae|wa|ya|ua)([ptknmjw]|ng)?([qh])?$/$1$2$3$4'/"
