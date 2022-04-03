@@ -16,7 +16,7 @@ ej可用e輸入。
 
 脣音後y變u。
 
-脣音3c均毋需使用<kbd>Space</kbd>
+脣音3c、云母均毋需使用<kbd>Space</kbd>
 
 ## 鍵位表
 
