@@ -31,7 +31,7 @@ ej可用e輸入。
     Q + W <nr>, W + E <dr>, E + R <tr>, R + T <trh>,
     A + S <m>, S + D <b>, D + F <p>, F + G <ph>,
     Z + X <sr>, X + C <dzr>, C + V <tsr>, V + B <tsrh>
-    W + A <h>, A + D <zj>, S + F <sj>, E + F <l>, A + F <q>
+    W + A <q>, A + D <zj>, S + F <sj>, E + F <l>, A + F <h>
     Z + V <zr>,
 
 ### 組合韻母
